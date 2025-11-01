@@ -1,10 +1,10 @@
 import admin from "firebase-admin";
-import firebaseCredentails from "./firebaseCredentails.json";
+// import firebaseCredentails from "./firebaseCredentails.json";
 import { logger } from "../logger";
-const serviceAccount = firebaseCredentails as admin.ServiceAccount
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-});
+// const serviceAccount = firebaseCredentails as admin.ServiceAccount
+// admin.initializeApp({
+//     credential: admin.credential.cert(serviceAccount)
+// });
 const messaging = admin.messaging();
 
 export const sendPush = (message: any, sound = "rapidodefault.mp3") => {
