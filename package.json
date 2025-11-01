@@ -6,7 +6,7 @@
 		"dev": "bun --watch run src/app.ts",
 		"clean": "rm -rf dist && echo 'Done.'",
 		"build-modules": "bun run ./build-modules.ts",
-		"build-app": "bun build ./src/app.ts --outdir ./dist --target bun --splitting",
+		"build-app": "bun install && bun build ./src/app.ts --outdir ./dist --target bun --splitting",
 		"app-build": "bun run build-modules && bun run build-app",
 		"start": "bun run dist/app.js",
 		"pm2-start": "tsc && pm2 start src/app.ts --name rapidoride-backend",
